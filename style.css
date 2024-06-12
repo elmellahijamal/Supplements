@@ -10,7 +10,63 @@ body{
     box-sizing: border-box;
 }
 
-nav{
+/* General styling for the navigation bar */
+nav {
+    padding: 20px 40px;
+    text-align: center;
+    position: fixed;
+    background: linear-gradient(to bottom, #eac8c4, #e0bab6);
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 18px;
+    border: solid 1px gray;
+    background-color: #555;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #777;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Adjust margin for stacked items */
+    }
+
+    nav a {
+        padding: 10px 30px; /* Adjust padding for better touch targets */
+        font-size: 16px; /* Slightly smaller font size on small screens */
+    }
+}
+
+
+/*nav{
     padding: 20px 40px;
     text-align: center;
     position: fixed;
@@ -40,7 +96,7 @@ nav a{
     margin: 50px;
     background-color: #555;
 
-}
+}*/
 
 .container{
     text-align: center;
